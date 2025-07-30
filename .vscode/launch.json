@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/../../artifacts/bin/ProcoreDailyLogsConsole/Debug/net9.0/ProcoreDailyLogsConsole.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "env": {
+                "PROCORE_CLIENT_ID": "aL520UinxnlSRWC2H7QvPA81c4l10R-PSkBwwOCRRXo",
+                "PROCORE_CLIENT_SECRET": "67uOA5sM0gHlsNAcrIovjHIPZaMBMoqAulrUTWB9wSY"
+            }
+        },
+        {
+            "name": ".NET Core Launch (test endpoints)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/../../artifacts/bin/ProcoreDailyLogsConsole/Debug/net9.0/ProcoreDailyLogsConsole.dll",
+            "args": ["test"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "env": {
+                "PROCORE_CLIENT_ID": "aL520UinxnlSRWC2H7QvPA81c4l10R-PSkBwwOCRRXo",
+                "PROCORE_CLIENT_SECRET": "67uOA5sM0gHlsNAcrIovjHIPZaMBMoqAulrUTWB9wSY"
+            }
+        },
+        {
+            "name": "MCP Server (STDIO)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-mcp",
+            "program": "${workspaceFolder}/../../artifacts/bin/ProcoreMcpServer/Debug/net9.0/ProcoreMcpServer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ProcoreMcpServer",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "PROCORE_CLIENT_ID": "aL520UinxnlSRWC2H7QvPA81c4l10R-PSkBwwOCRRXo",
+                "PROCORE_CLIENT_SECRET": "67uOA5sM0gHlsNAcrIovjHIPZaMBMoqAulrUTWB9wSY"
+            }
+        },
+        {
+            "name": "MCP Server (Debug Attach)",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
